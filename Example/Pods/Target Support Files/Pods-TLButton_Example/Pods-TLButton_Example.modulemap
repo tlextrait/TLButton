@@ -1,0 +1,6 @@
+framework module Pods_TLButton_Example {
+  umbrella header "Pods-TLButton_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

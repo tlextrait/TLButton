@@ -1,0 +1,22 @@
+{
+  "name": "TLButton",
+  "version": "0.1.0",
+  "summary": "Create buttons using less code and customize them more from Interface Builder.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/TLButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Thomas Lextrait": "thomas.lextrait@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/TLButton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TLButton/Classes/**/*"
+}
