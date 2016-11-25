@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-public class TLButton: UIButton {
+open class TLButton: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
