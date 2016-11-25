@@ -1,6 +1,6 @@
 # TLButton
 
-[![CI Status](http://img.shields.io/travis/Thomas Lextrait/TLButton.svg?style=flat)](https://travis-ci.org/Thomas Lextrait/TLButton)
+[![CI Status](http://img.shields.io/travis/tlextrait/TLButton.svg?style=flat)](https://travis-ci.org/tlextrait/TLButton)
 [![Version](https://img.shields.io/cocoapods/v/TLButton.svg?style=flat)](http://cocoapods.org/pods/TLButton)
 [![License](https://img.shields.io/cocoapods/l/TLButton.svg?style=flat)](http://cocoapods.org/pods/TLButton)
 [![Platform](https://img.shields.io/cocoapods/p/TLButton.svg?style=flat)](http://cocoapods.org/pods/TLButton)
