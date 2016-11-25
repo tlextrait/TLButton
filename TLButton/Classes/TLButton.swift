@@ -10,45 +10,45 @@ import UIKit
 @IBDesignable
 open class TLButton: UIButton {
 
-    @IBInspectable var cornerRadius: CGFloat = 0 {
+    @IBInspectable open var cornerRadius: CGFloat = 0 {
         didSet {
             layer.cornerRadius = cornerRadius
             maskToBoundsIfRequired()
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat = 0 {
+    @IBInspectable open var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
         }
     }
     
-    @IBInspectable var borderColor: UIColor = UIColor.white {
+    @IBInspectable open var borderColor: UIColor = UIColor.white {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
     }
     
-    @IBInspectable var shadowColor: UIColor = UIColor.black {
+    @IBInspectable open var shadowColor: UIColor = UIColor.black {
         didSet {
             layer.shadowColor = shadowColor.cgColor
         }
     }
     
-    @IBInspectable var shadowOpacity: Float = 0 {
+    @IBInspectable open var shadowOpacity: Float = 0 {
         didSet {
             layer.shadowOpacity = shadowOpacity
             maskToBoundsIfRequired()
         }
     }
     
-    @IBInspectable var shadowRadius: CGFloat = 0 {
+    @IBInspectable open var shadowRadius: CGFloat = 0 {
         didSet {
             layer.shadowRadius = shadowRadius
         }
     }
     
-    @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
+    @IBInspectable open var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
         didSet {
             layer.shadowOffset = shadowOffset
         }
