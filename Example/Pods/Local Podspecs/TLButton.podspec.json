@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "Create buttons using less code and customize them more from Interface Builder.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/TLButton",
+  "homepage": "https://github.com/tlextrait/TLButton",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Thomas Lextrait": "thomas.lextrait@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/TLButton.git",
+    "git": "https://github.com/tlextrait/TLButton.git",
     "tag": "0.1.0"
   },
   "platforms": {

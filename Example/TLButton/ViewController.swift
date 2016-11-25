@@ -11,7 +11,7 @@ import UIKit
 class HomeController: UIViewController {
 
     //@IBOutlet weak var ibButton: TLButton!
-    private var prButton: TLButton?
+    //private var prButton: TLButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
