@@ -10,9 +10,18 @@ import UIKit
 @IBDesignable
 open class TLButton: UIButton {
     
+    public convenience init(title: String) {
+        self.init(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        setTitle(title, for: .normal)
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
+    
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //fatalError("init(coder:) has not been implemented")
     }
     
     private var handlers: [UInt : [()->Void]] = [:]

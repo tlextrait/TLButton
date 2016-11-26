@@ -18,5 +18,13 @@ class TableOfContentsSpec: QuickSpec {
                 }
             }
         }
+        
+        describe("handler tests") {
+            context("adding") {
+                it("should add a handler") {
+                    let button = TLButton(title: "HEllo")
+                }
+            }
+        }
     }
 }
