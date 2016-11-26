@@ -11,10 +11,22 @@ import UIKit
 open class TLButton: UIButton {
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
     }
     
-    private var touchAction: (()->Void)?
+    private var handlers: [UInt : [()->Void]] = [:]
+    private let selectorForEvent: [UInt : Selector] = [
+        UIControlEvents.touchDown.rawValue: #selector(touchDown),
+        UIControlEvents.touchDownRepeat.rawValue: #selector(touchDownRepeat),
+        UIControlEvents.touchDragInside.rawValue: #selector(touchDragInside),
+        UIControlEvents.touchDragOutside.rawValue: #selector(touchDragOutside),
+        UIControlEvents.touchDragEnter.rawValue: #selector(touchDragEnter),
+        UIControlEvents.touchDragExit.rawValue: #selector(touchDragExit),
+        UIControlEvents.touchUpInside.rawValue: #selector(touchUpInside),
+        UIControlEvents.touchUpOutside.rawValue: #selector(touchUpOutside),
+        UIControlEvents.touchCancel.rawValue: #selector(touchCancel)
+    ]
     
     // Corners
 
@@ -78,16 +90,62 @@ open class TLButton: UIButton {
     
     // Actions
     
-    open func onTouch(handler: @escaping ()->Void) -> TLButton {
-        touchAction = handler
-        addTarget(self, action: #selector(touchEvent), for: UIControlEvents.touchUpInside)
-        return self
+    open func on(event: UIControlEvents, handler: @escaping ()->Void) {
+        if handlers[event.rawValue] == nil {
+            handlers[event.rawValue] = []
+        }
+        handlers[event.rawValue]?.append(handler)
+        guard let selector = selectorForEvent[event.rawValue] else {
+            print("TLButton doesn't implement UIControlEvent of type: \(event)")
+            return
+        }
+        addTarget(self, action: selector, for: event)
     }
     
-    public func touchEvent() {
-        if touchAction != nil {
-           touchAction!()
+    // Handlers
+    
+    private func callHandlersFor(event: UIControlEvents) {
+        if handlers[event.rawValue] != nil {
+            for handler in handlers[event.rawValue]! {
+                handler()
+            }
         }
+    }
+    
+    @objc public func touchDown() {
+        callHandlersFor(event: .touchDown)
+    }
+    
+    @objc public func touchDownRepeat() {
+        callHandlersFor(event: .touchDownRepeat)
+    }
+    
+    @objc public func touchDragInside() {
+        callHandlersFor(event: .touchDragInside)
+    }
+    
+    @objc public func touchDragOutside() {
+        callHandlersFor(event: .touchDragOutside)
+    }
+    
+    @objc public func touchDragEnter() {
+        callHandlersFor(event: .touchDragEnter)
+    }
+    
+    @objc public func touchDragExit() {
+        callHandlersFor(event: .touchDragExit)
+    }
+    
+    @objc public func touchUpInside() {
+        callHandlersFor(event: .touchUpInside)
+    }
+    
+    @objc public func touchUpOutside() {
+        callHandlersFor(event: .touchUpOutside)
+    }
+    
+    @objc public func touchCancel() {
+        callHandlersFor(event: .touchCancel)
     }
 
 }

@@ -20,17 +20,20 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ibButton.onTouch {
+        print("Hello World")
+        
+        ibButton.on(event: .touchUpInside) {
             print("Tapped button 1")
         }
         
-        prButton = TLButton(frame: CGRect(x: 20, y: 200, width: 200, height: 15))
-        prButton?.setTitle("TLButton", for: .normal)
+        //prButton = TLButton(frame: CGRect(x: 20, y: 200, width: 200, height: 15))
+        //prButton?.setTitle("TLButton", for: .normal)
+        /*
         prButton?.onTouch {
             print("Tapped button 2")
         }
-        
-        view.addSubview(prButton!)
+        */
+        //view.addSubview(prButton!)
     }
 
 }
