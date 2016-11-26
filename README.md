@@ -28,6 +28,8 @@ button.on(event: .touchUpInside) {
 
 ## Requirements
 
+Swift 3.0+
+
 ## Installation
 
 TLButton is available through [CocoaPods](http://cocoapods.org). To install
