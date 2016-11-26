@@ -10,20 +10,11 @@ import UIKit
 @IBDesignable
 open class TLButton: UIButton {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(title: String, frame: CGRect) {
-        self.init(frame: frame)
-        
-        setTitle(title, for: .normal)
-    }
+    private var touchAction: (()->Void)?
     
     // Corners
 
@@ -82,13 +73,21 @@ open class TLButton: UIButton {
     }
     
     private func maskToBoundsIfRequired() {
-        //layer.masksToBounds = shouldMaskToBounds()
+        layer.masksToBounds = shouldMaskToBounds()
     }
     
     // Actions
     
-    open func onTouch() -> TLButton {
+    open func onTouch(handler: @escaping ()->Void) -> TLButton {
+        touchAction = handler
+        addTarget(self, action: #selector(touchEvent), for: UIControlEvents.touchUpInside)
         return self
+    }
+    
+    public func touchEvent() {
+        if touchAction != nil {
+           touchAction!()
+        }
     }
 
 }

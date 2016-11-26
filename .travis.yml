@@ -2,15 +2,20 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
-osx_image: xcode8.1
-language: swift
-xcode_sdk: iphonesimulator10.1
-cache: cocoapods
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod repo update --silent # Update master cocoapod repo, silently to avoid trash in the Travis log
-- pod install --project-directory=Example
+#osx_image: xcode8.1
+#language: swift
+#xcode_sdk: iphonesimulator10.1
+#cache: cocoapods
+#before_install:
+#- gem install cocoapods # Since Travis is not always on latest version
+#- pod repo update --silent # Update master cocoapod repo, silently to avoid trash in the Travis log
+#- pod install --project-directory=Example
 
-script:
-- set -o pipefail && xcodebuild test -workspace Example/TLButton.xcworkspace -scheme TLButton-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.1,name=iPhone 7' ONLY_ACTIVE_ARCH=NO | xcpretty -c --test --color
-- pod lib lint
+#script:
+#- set -o pipefail && xcodebuild test -workspace Example/TLButton.xcworkspace -scheme TLButton-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.1,name=iPhone 7' ONLY_ACTIVE_ARCH=NO | xcpretty -c --test --color
+#- pod lib lint
+
+language: swift
+script: xcodebuild test -workspace Example/TLButton.xcworkspace -scheme TLButton-Example -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0'
+osx_image: xcode8
+xcode_sdk: iphonesimulator10.0

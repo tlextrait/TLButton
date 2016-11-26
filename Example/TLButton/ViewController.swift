@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import TLButton
 
 class HomeController: UIViewController {
-
-    //@IBOutlet weak var ibButton: TLButton!
-    //private var prButton: TLButton?
+    
+    // Button created in Interface Builder
+    @IBOutlet weak var ibButton: TLButton!
+    
+    // Button created programmatically
+    private var prButton: TLButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        ibButton.onTouch {
+            print("Tapped button 1")
+        }
+        
+        prButton = TLButton(frame: CGRect(x: 20, y: 200, width: 200, height: 15))
+        prButton?.setTitle("TLButton", for: .normal)
+        prButton?.onTouch {
+            print("Tapped button 2")
+        }
+        
+        view.addSubview(prButton!)
     }
 
 }

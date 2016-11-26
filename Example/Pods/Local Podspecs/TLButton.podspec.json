@@ -2,7 +2,7 @@
   "name": "TLButton",
   "version": "0.1.0",
   "summary": "Create buttons using less code and customize them more from Interface Builder.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "TLButton allows you to create buttons with less code, as well as customize them more in depth directly from the Interface Builder.",
   "homepage": "https://github.com/tlextrait/TLButton",
   "license": {
     "type": "MIT",
