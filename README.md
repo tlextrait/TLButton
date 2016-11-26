@@ -13,8 +13,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 TLButton is IBDesignable and therefore works with Interface Builder. This allows you to customize your buttons, such as setting rounded corners or shadows and view the result directly in your storyboard:
 
-![Interface Builder Button](https://cloud.githubusercontent.com/assets/1252930/20642839/2f632a96-b3e8-11e6-8f4a-c7db4f2e96ec.png)
-![Toolbox](https://cloud.githubusercontent.com/assets/1252930/20642888/279e3c78-b3e9-11e6-8384-358ed0915852.png)
+![Interface Builder](https://cloud.githubusercontent.com/assets/1252930/20643826/b7a9a864-b3f0-11e6-8b89-ed8ee8dd08af.png)
 
 ### Events
 
