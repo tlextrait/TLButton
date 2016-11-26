@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = TLButton allows you to create buttons with less code, as well as customize them more in depth directly from the Interface Builder.
+  s.description      = 'TLButton allows you to create buttons with less code, as well as customize them more in depth directly from the Interface Builder.'
   s.homepage         = 'https://github.com/tlextrait/TLButton'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
