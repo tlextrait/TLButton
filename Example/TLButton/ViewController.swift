@@ -15,25 +15,34 @@ class HomeController: UIViewController {
     @IBOutlet weak var ibButton: TLButton!
     
     // Button created programmatically
-    private var prButton: TLButton?
+    private var prButton: TLButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Hello World")
+        //
+        // Interface Builder button
+        //
         
         ibButton.on(event: .touchUpInside) {
             print("Tapped button 1")
         }
         
-        //prButton = TLButton(frame: CGRect(x: 20, y: 200, width: 200, height: 15))
-        //prButton?.setTitle("TLButton", for: .normal)
-        /*
-        prButton?.onTouch {
+        //
+        // Programmatic button
+        //
+        
+        prButton = TLButton(title: "TLButton")
+        prButton.backgroundColor = UIColor.clear
+        prButton.borderColor = UIColor.red
+        prButton.borderWidth = 1.0
+        prButton.setTitleColor(UIColor.red, for: .normal)
+        prButton.on(event: .touchUpInside) {
             print("Tapped button 2")
         }
-        */
-        //view.addSubview(prButton!)
+        prButton.center = view.center
+        
+        view.addSubview(prButton!)
     }
 
 }
