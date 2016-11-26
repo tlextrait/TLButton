@@ -21,14 +21,8 @@ TLButton is IBDesignable and therefore works with Interface Builder. This allows
 TLButton allows you to pass a code block to the button for given events.
 
 ```swift
-@IBOutlet weak var button: TLButton!
-
-override func viewDidLoad() {
-    super.viewDidLoad()
-
-    button.on(event: .touchUpInside) {
-        print("Tapped button 1")
-    }
+button.on(event: .touchUpInside) {
+    print("Tapped button")
 }
 ```
 
