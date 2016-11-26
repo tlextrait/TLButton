@@ -26,7 +26,7 @@ TLButton allows you to pass a code block to the button for given events.
 override func viewDidLoad() {
     super.viewDidLoad()
 
-    ibButton.on(event: .touchUpInside) {
+    button.on(event: .touchUpInside) {
         print("Tapped button 1")
     }
 }
