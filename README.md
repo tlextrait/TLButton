@@ -16,6 +16,10 @@ TLButton is IBDesignable and therefore works with Interface Builder. This allows
 ![Interface Builder Button](https://cloud.githubusercontent.com/assets/1252930/20642839/2f632a96-b3e8-11e6-8f4a-c7db4f2e96ec.png)
 ![Toolbox](https://cloud.githubusercontent.com/assets/1252930/20642888/279e3c78-b3e9-11e6-8384-358ed0915852.png)
 
+### Events
+
+TLButton allows you to pass a code block to the button for given events.
+
 ```swift
 @IBOutlet weak var button: TLButton!
 
