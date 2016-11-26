@@ -36,6 +36,7 @@ class HomeController: UIViewController {
         prButton.backgroundColor = UIColor.clear
         prButton.borderColor = UIColor.red
         prButton.borderWidth = 1.0
+        prButton.cornerRadius = 4.0
         prButton.setTitleColor(UIColor.red, for: .normal)
         prButton.on(event: .touchUpInside) {
             print("Tapped button 2")
